@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLB Model with A-Frame</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- カメラとコントロール -->
+      <a-entity camera position="0 1.6 5" look-controls></a-entity>
+
+      <!-- 照明 -->
+      <a-light type="ambient" color="#ffffff"></a-light>
+      <a-light type="directional" position="1 1 0" intensity="1"></a-light>
+
+      <!-- GLBファイルの読み込み -->
+      <a-entity
+        gltf-model="sample.glb"
+        position="0 0 0"
+        scale="1 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+
+      <!-- 地面 -->
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    </a-scene>
+  </body>
+</html>
